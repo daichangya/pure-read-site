@@ -3,18 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pure Read — Chrome 阅读插件：一键进入阅读模式，自动提取正文、去除广告与侧栏，支持自定义排版与主题。" />
   <title>Pure Read — 一键阅读，去除噪音</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="wrap">
-      <h1 class="site-title">Pure Read</h1>
-      <p class="site-slogan">一键阅读，去除噪音</p>
+      <div class="site-brand">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          <path d="M8 7h8"/>
+          <path d="M8 11h8"/>
+        </svg>
+        <div>
+          <h1 class="site-title">Pure Read</h1>
+          <p class="site-slogan">一键阅读，去除噪音</p>
+        </div>
+      </div>
       <nav class="site-nav">
-        <a href="#pure-read">扩展</a>
-        <a href="#rules">规则仓库</a>
-        <a href="#links">链接</a>
+        <a href="#pure-read">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          扩展
+        </a>
+        <a href="#rules">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          规则仓库
+        </a>
+        <a href="#links">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          链接
+        </a>
       </nav>
     </div>
   </header>
@@ -22,42 +42,79 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <p class="hero-intro">Chrome 阅读插件：在当前页一键进入阅读模式，自动提取正文、去除广告与侧栏，支持自定义排版与主题。规则与推广数据可从自建站点加载。</p>
+        <h1>Chrome 阅读插件，专注正文</h1>
+        <p class="hero-subtitle">在当前页一键进入阅读模式，自动提取正文、去除广告与侧栏，支持自定义排版与主题。规则与推广数据可从自建站点加载。</p>
         <p class="hero-cta">
-          <a class="btn btn-primary" href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">GitHub 主仓库</a>
-          <a class="btn" href="#pure-read">安装说明</a>
+          <a class="btn btn-primary" href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub 主仓库
+          </a>
+          <a class="btn btn-secondary" href="#pure-read">安装说明</a>
         </p>
       </div>
     </section>
 
     <section id="pure-read" class="section">
       <div class="wrap">
-        <h2>Pure Read 扩展</h2>
-        <p>Chrome 扩展（Manifest V3），在任意网页点击图标或使用快捷键即可进入阅读模式，正文在本地提取与渲染，不上传内容。</p>
+        <div class="section-head">
+          <h2>Pure Read 扩展</h2>
+          <p class="section-desc">Chrome 扩展（Manifest V3），在任意网页点击图标或使用快捷键即可进入阅读模式，正文在本地提取与渲染，不上传内容。</p>
+        </div>
 
         <h3>核心功能</h3>
-        <ul>
-          <li><strong>一键阅读</strong>：扩展图标、快捷键 <kbd>Ctrl+Shift+L</kbd>（Mac：<kbd>Command+Shift+L</kbd>）、右键菜单「使用阅读模式打开」。</li>
-          <li><strong>排版与主题</strong>：浅色 / 深色 / 护眼等主题，字体（无衬线 / 衬线 / 等宽），字号、行高、阅读宽度可调，预设风格（默认 / 紧凑 / 资讯 / 小说）。</li>
-          <li><strong>阅读增强</strong>：阅读进度条、文章大纲、章节导航与连续阅读、搜索高亮、Focus 模式、TTS 朗读、高亮与笔记等。</li>
-          <li><strong>导出与分享</strong>：导出 Markdown / HTML / 纯文本、打印与 PDF、截图、邮件与社交分享、高亮笔记导出。</li>
-          <li><strong>配置持久化</strong>：设置保存在 <code>chrome.storage.sync</code>，可跨设备同步；白名单、黑名单、配置导入导出。</li>
-        </ul>
+        <div class="card-grid">
+          <div class="card" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <p class="card-title">一键阅读</p>
+            <p class="card-desc">扩展图标、快捷键 <kbd>Ctrl+Shift+L</kbd>（Mac：<kbd>⌘+Shift+L</kbd>）、右键菜单「使用阅读模式打开」。</p>
+          </div>
+          <div class="card" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.82-.12 2.66-.34"/><path d="M22 12c0-5.5-4.5-10-10-10"/></svg>
+            <p class="card-title">排版与主题</p>
+            <p class="card-desc">浅色 / 深色 / 护眼等主题，字体与字号可调，预设风格（默认 / 紧凑 / 资讯 / 小说）。</p>
+          </div>
+          <div class="card" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h7"/></svg>
+            <p class="card-title">阅读增强</p>
+            <p class="card-desc">阅读进度条、文章大纲、章节导航与连续阅读、搜索高亮、Focus 模式、TTS 朗读、高亮与笔记等。</p>
+          </div>
+          <div class="card" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <p class="card-title">导出与分享</p>
+            <p class="card-desc">导出 Markdown / HTML / 纯文本、打印与 PDF、截图、邮件与社交分享、高亮笔记导出。</p>
+          </div>
+          <div class="card" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <p class="card-title">配置持久化</p>
+            <p class="card-desc">设置保存在 <code>chrome.storage.sync</code>，可跨设备同步；白名单、黑名单、配置导入导出。</p>
+          </div>
+        </div>
 
         <h3>从源码安装（开发者模式）</h3>
-        <ol>
-          <li>克隆 <a href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">主仓库</a>，执行 <code>npm install</code>、<code>npm run build</code>。</li>
-          <li>打开 Chrome <code>chrome://extensions/</code>，开启「开发者模式」。</li>
-          <li>「加载已解压的扩展程序」选择项目下的 <strong>dist</strong> 目录。</li>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">1</span>
+            <p class="step-text">克隆 <a href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">主仓库</a>，执行 <code>npm install</code>、<code>npm run build</code>。</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">2</span>
+            <p class="step-text">打开 Chrome <code>chrome://extensions/</code>，开启「开发者模式」。</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">3</span>
+            <p class="step-text">「加载已解压的扩展程序」选择项目下的 <strong>dist</strong> 目录。</p>
+          </li>
         </ol>
-        <p>环境要求：Node.js 18+，Chrome 88+（支持 Manifest V3）。</p>
+        <p class="env-note">环境要求：Node.js 18+，Chrome 88+（支持 Manifest V3）。</p>
       </div>
     </section>
 
     <section id="rules" class="section">
       <div class="wrap">
-        <h2>Pure Read Rules</h2>
-        <p>站点规则仓库，与主项目解耦，用于正文提取与章节导航。每条规则通过 <strong>host</strong> 与 CSS 选择器指定标题、正文、作者、排除区域及可选的下一章/上一章/目录。</p>
+        <div class="section-head">
+          <h2>Pure Read Rules</h2>
+          <p class="section-desc">站点规则仓库，与主项目解耦，用于正文提取与章节导航。每条规则通过 <strong>host</strong> 与 CSS 选择器指定标题、正文、作者、排除区域及可选的下一章/上一章/目录。</p>
+        </div>
 
         <h3>谁会用</h3>
         <ul>
@@ -66,12 +123,12 @@
         </ul>
 
         <h3>规则分类</h3>
-        <ul>
-          <li><strong>novel</strong> — 小说站（下一章/目录等）</li>
-          <li><strong>news</strong> — 新闻资讯</li>
-          <li><strong>tech</strong> — 技术博客</li>
-          <li><strong>general</strong> — 通用站点（Medium、WordPress、GitHub 等）</li>
-        </ul>
+        <div class="badges">
+          <span class="badge">novel — 小说站</span>
+          <span class="badge">news — 新闻资讯</span>
+          <span class="badge">tech — 技术博客</span>
+          <span class="badge">general — 通用站点</span>
+        </div>
 
         <p>贡献规则：Fork 仓库 → 在 <code>rules/{category}/</code> 下新增或修改 JSON → 更新 <code>index.json</code> → 提交 PR。详见仓库内 CONTRIBUTING 与 docs。</p>
       </div>
@@ -80,20 +137,47 @@
     <section id="links" class="section section-links">
       <div class="wrap">
         <h2>链接</h2>
-        <ul class="link-list">
-          <li><a href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">Pure Read 主仓库</a></li>
-          <li><a href="https://github.com/daichangya/pure-read-rules" target="_blank" rel="noopener noreferrer">Pure Read Rules 规则仓库</a></li>
-          <li><a href="https://github.com/daichangya/pure-read-rules/blob/main/docs/integration.md" target="_blank" rel="noopener noreferrer">规则集成说明（integration.md）</a></li>
-          <li><a href="https://github.com/daichangya/pure-read-rules/blob/main/docs/rule-schema.md" target="_blank" rel="noopener noreferrer">规则格式说明（rule-schema.md）</a></li>
-        </ul>
+        <div class="link-grid">
+          <a class="link-card" href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div>
+              <span>主仓库</span>
+              <small>pure-read</small>
+            </div>
+          </a>
+          <a class="link-card" href="https://github.com/daichangya/pure-read-rules" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div>
+              <span>规则仓库</span>
+              <small>pure-read-rules</small>
+            </div>
+          </a>
+          <a class="link-card" href="https://github.com/daichangya/pure-read-rules/blob/main/docs/integration.md" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <div>
+              <span>规则集成说明</span>
+              <small>integration.md</small>
+            </div>
+          </a>
+          <a class="link-card" href="https://github.com/daichangya/pure-read-rules/blob/main/docs/rule-schema.md" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <div>
+              <span>规则格式说明</span>
+              <small>rule-schema.md</small>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>正文仅在本地提取与渲染，不会将文章内容上传到外部服务器。</p>
-      <p>MIT License · Pure Read</p>
+      <p>正文仅在本地提取与渲染，不会将文章内容上传到外部服务器。MIT License · Pure Read</p>
+      <a class="back-top" href="#top" aria-label="返回顶部">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+        返回顶部
+      </a>
     </div>
   </footer>
 </body>
