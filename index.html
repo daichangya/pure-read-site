@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pure Read — 一键阅读，去除噪音</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="site-title">Pure Read</h1>
+      <p class="site-slogan">一键阅读，去除噪音</p>
+      <nav class="site-nav">
+        <a href="#pure-read">扩展</a>
+        <a href="#rules">规则仓库</a>
+        <a href="#links">链接</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-intro">Chrome 阅读插件：在当前页一键进入阅读模式，自动提取正文、去除广告与侧栏，支持自定义排版与主题。规则与推广数据可从自建站点加载。</p>
+        <p class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">GitHub 主仓库</a>
+          <a class="btn" href="#pure-read">安装说明</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="pure-read" class="section">
+      <div class="wrap">
+        <h2>Pure Read 扩展</h2>
+        <p>Chrome 扩展（Manifest V3），在任意网页点击图标或使用快捷键即可进入阅读模式，正文在本地提取与渲染，不上传内容。</p>
+
+        <h3>核心功能</h3>
+        <ul>
+          <li><strong>一键阅读</strong>：扩展图标、快捷键 <kbd>Ctrl+Shift+L</kbd>（Mac：<kbd>Command+Shift+L</kbd>）、右键菜单「使用阅读模式打开」。</li>
+          <li><strong>排版与主题</strong>：浅色 / 深色 / 护眼等主题，字体（无衬线 / 衬线 / 等宽），字号、行高、阅读宽度可调，预设风格（默认 / 紧凑 / 资讯 / 小说）。</li>
+          <li><strong>阅读增强</strong>：阅读进度条、文章大纲、章节导航与连续阅读、搜索高亮、Focus 模式、TTS 朗读、高亮与笔记等。</li>
+          <li><strong>导出与分享</strong>：导出 Markdown / HTML / 纯文本、打印与 PDF、截图、邮件与社交分享、高亮笔记导出。</li>
+          <li><strong>配置持久化</strong>：设置保存在 <code>chrome.storage.sync</code>，可跨设备同步；白名单、黑名单、配置导入导出。</li>
+        </ul>
+
+        <h3>从源码安装（开发者模式）</h3>
+        <ol>
+          <li>克隆 <a href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">主仓库</a>，执行 <code>npm install</code>、<code>npm run build</code>。</li>
+          <li>打开 Chrome <code>chrome://extensions/</code>，开启「开发者模式」。</li>
+          <li>「加载已解压的扩展程序」选择项目下的 <strong>dist</strong> 目录。</li>
+        </ol>
+        <p>环境要求：Node.js 18+，Chrome 88+（支持 Manifest V3）。</p>
+      </div>
+    </section>
+
+    <section id="rules" class="section">
+      <div class="wrap">
+        <h2>Pure Read Rules</h2>
+        <p>站点规则仓库，与主项目解耦，用于正文提取与章节导航。每条规则通过 <strong>host</strong> 与 CSS 选择器指定标题、正文、作者、排除区域及可选的下一章/上一章/目录。</p>
+
+        <h3>谁会用</h3>
+        <ul>
+          <li><strong>Pure Read</strong> 扩展：从自建网站或本地加载规则（<code>MARKET_REMOTE_BASE_URL</code>）。</li>
+          <li>其他兼容本格式的阅读/抓取工具（见规则 schema 文档）。</li>
+        </ul>
+
+        <h3>规则分类</h3>
+        <ul>
+          <li><strong>novel</strong> — 小说站（下一章/目录等）</li>
+          <li><strong>news</strong> — 新闻资讯</li>
+          <li><strong>tech</strong> — 技术博客</li>
+          <li><strong>general</strong> — 通用站点（Medium、WordPress、GitHub 等）</li>
+        </ul>
+
+        <p>贡献规则：Fork 仓库 → 在 <code>rules/{category}/</code> 下新增或修改 JSON → 更新 <code>index.json</code> → 提交 PR。详见仓库内 CONTRIBUTING 与 docs。</p>
+      </div>
+    </section>
+
+    <section id="links" class="section section-links">
+      <div class="wrap">
+        <h2>链接</h2>
+        <ul class="link-list">
+          <li><a href="https://github.com/daichangya/pure-read" target="_blank" rel="noopener noreferrer">Pure Read 主仓库</a></li>
+          <li><a href="https://github.com/daichangya/pure-read-rules" target="_blank" rel="noopener noreferrer">Pure Read Rules 规则仓库</a></li>
+          <li><a href="https://github.com/daichangya/pure-read-rules/blob/main/docs/integration.md" target="_blank" rel="noopener noreferrer">规则集成说明（integration.md）</a></li>
+          <li><a href="https://github.com/daichangya/pure-read-rules/blob/main/docs/rule-schema.md" target="_blank" rel="noopener noreferrer">规则格式说明（rule-schema.md）</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>正文仅在本地提取与渲染，不会将文章内容上传到外部服务器。</p>
+      <p>MIT License · Pure Read</p>
+    </div>
+  </footer>
+</body>
+</html>
