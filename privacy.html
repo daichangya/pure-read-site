@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pure Read extension Privacy Policy. 纯读扩展隐私政策：数据收集、使用与披露说明。" />
+  <title>Privacy Policy — Pure Read</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="site-brand">
+        <a href="index.html" style="display:flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <path d="M8 7h8"/>
+            <path d="M8 11h8"/>
+          </svg>
+          <div>
+            <h1 class="site-title">Pure Read</h1>
+            <p class="site-slogan">一键阅读，去除噪音</p>
+          </div>
+        </a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">首页</a>
+        <a href="index.html#links">链接</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="border-top: none;">
+      <div class="wrap">
+        <h1 style="margin:0 0 1rem;font-size:1.75rem;">Privacy Policy</h1>
+        <p class="section-desc" style="margin-bottom:1.5rem;">This policy describes how the Pure Read browser extension (“the extension”) handles user data. Please read it before using the extension.</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">1. Data upload</h2>
+        <p>The extension extracts and renders article content <strong>locally on your device</strong>. <strong>It does not upload article content, pages you read, or text you enter to any external server</strong>. Content extraction and reader-mode rendering are performed entirely in your browser.</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">2. Storage and sync</h2>
+        <p>The extension uses Chrome’s <code>chrome.storage</code> (including <code>chrome.storage.sync</code>) to save your settings (e.g. theme, font size, reading width). This data is handled by Chrome’s sync mechanism; if you have Chrome sync enabled, it may sync across devices signed into the same Chrome account. We do not have access to or control over this stored data.</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">3. Network requests</h2>
+        <p>The extension may fetch rule index and rule files (JSON) from <strong>a rules source you configure</strong> (e.g. your own server or a default rules repository) for content extraction and chapter navigation. These requests retrieve configuration data only; no remote code is executed. If you use chapter navigation or continuous reading, the extension may request next/previous chapter pages to extract content locally; such requests are made on behalf of the current page and the data is used locally, not sent to servers we operate.</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">4. Permissions</h2>
+        <p>Permissions such as “access to all websites” are used to: inject reader mode on any webpage, request next/previous chapter pages when you use chapter navigation, and fetch rule data from your configured rules source. We do not use these permissions to collect your browsing history or identity for purposes unrelated to reading.</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">5. Changes and contact</h2>
+        <p>We may update this privacy policy; the updated version will be posted on this page. If you have questions about this policy or how the extension handles data, you can contact us via the project repository (e.g. GitHub Issues) or the contact information in the documentation.</p>
+
+        <hr style="margin:2.5rem 0 1.5rem;border:0;border-top:1px solid #ddd;" />
+        <h1 style="margin:0 0 1rem;font-size:1.75rem;">隐私政策</h1>
+        <p class="section-desc" style="margin-bottom:1.5rem;">本政策说明 Pure Read 浏览器扩展（下称「本扩展」）如何对待用户数据。请在使用本扩展前阅读。</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">1. 数据是否上传</h2>
+        <p>本扩展在您的设备上本地提取并渲染网页正文，<strong>不会将文章内容、您阅读的页面或您输入的文字上传到任何外部服务器</strong>。正文提取与阅读模式渲染均在浏览器内完成。</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">2. 存储与同步</h2>
+        <p>本扩展使用 Chrome 提供的 <code>chrome.storage</code>（包括 <code>chrome.storage.sync</code>）保存您的设置（如主题、字体、阅读宽度等）。此类数据由 Chrome 的同步机制处理，若您开启 Chrome 账户同步，可能会在您登录的同一 Chrome 账户下的设备之间同步。我们无法访问或控制这些存储内容。</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">3. 与外部网络的交互</h2>
+        <p>本扩展可能从<strong>您配置的规则/推广数据地址</strong>（如自建站点或默认规则仓库）拉取规则索引与规则详情（JSON 格式），用于正文提取与章节导航。此类请求仅获取配置数据，不执行远程代码。若您使用章节导航或连续阅读，扩展会请求下一章/上一章等页面内容以在本地提取正文，这些请求由扩展代表当前页面发起，数据在本地使用，不上传至我们控制的服务器。</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">4. 权限说明</h2>
+        <p>本扩展声明的「访问所有网站」类权限用于：在任意网页上注入阅读模式、在您使用章节导航时请求下一章/上一章页面、以及从您配置的规则源地址拉取规则数据。我们不会利用这些权限收集您的浏览历史或身份信息用于与阅读无关的目的。</p>
+
+        <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">5. 变更与联系</h2>
+        <p>我们可能会更新本隐私政策，更新后的版本将发布在本页面。若您对本政策或本扩展的数据处理有疑问，可通过项目仓库（如 GitHub）的 Issues 或文档中的联系方式与我们联系。</p>
+
+        <p style="margin-top:2rem;"><a href="index.html">返回首页</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>MIT License · Pure Read</p>
+      <a class="back-top" href="#top" aria-label="返回顶部">返回顶部</a>
+    </div>
+  </footer>
+</body>
+</html>
