@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,28 +11,37 @@
   <header class="site-header">
     <div class="wrap">
       <div class="site-brand">
-        <a href="index.html" style="display:flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <a href="index.html" class="site-brand-link" aria-label="Pure Read 首页">
+          <svg class="icon icon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
             <path d="M8 7h8"/>
             <path d="M8 11h8"/>
           </svg>
           <div>
-            <h1 class="site-title">Pure Read</h1>
-            <p class="site-slogan">一键阅读，去除噪音</p>
+            <span class="site-title">Pure Read</span>
+            <span class="site-slogan" data-lang="zh">一键阅读，去除噪音</span>
+            <span class="site-slogan" data-lang="en">One-click reading, less clutter</span>
           </div>
         </a>
       </div>
       <nav class="site-nav">
-        <a href="index.html">首页</a>
-        <a href="index.html#links">链接</a>
+        <a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+        <a href="index.html#features"><span data-lang="zh">功能</span><span data-lang="en">Features</span></a>
+        <a href="index.html#how-to-use"><span data-lang="zh">使用</span><span data-lang="en">How to use</span></a>
+        <a href="index.html#preview"><span data-lang="zh">预览</span><span data-lang="en">Preview</span></a>
+        <a href="index.html#developers"><span data-lang="zh">开发者</span><span data-lang="en">Developers</span></a>
+        <a href="privacy.html"><span data-lang="zh">隐私</span><span data-lang="en">Privacy</span></a>
+        <span class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+        </span>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="section" style="border-top: none;">
+    <section class="section section-first">
       <div class="wrap">
         <h1 style="margin:0 0 1rem;font-size:1.75rem;">Privacy Policy</h1>
         <p class="section-desc" style="margin-bottom:1.5rem;">This policy describes how the Pure Read browser extension (“the extension”) handles user data. Please read it before using the extension.</p>
@@ -71,16 +80,26 @@
         <h2 style="font-size:1.25rem;margin:1.5rem 0 0.5rem;">5. 变更与联系</h2>
         <p>我们可能会更新本隐私政策，更新后的版本将发布在本页面。若您对本政策或本扩展的数据处理有疑问，可通过项目仓库（如 GitHub）的 Issues 或文档中的联系方式与我们联系。</p>
 
-        <p style="margin-top:2rem;"><a href="index.html">返回首页</a></p>
+        <p class="back-home"><a href="index.html"><span data-lang="zh">返回首页</span><span data-lang="en">Back to home</span></a></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>MIT License · Pure Read</p>
-      <a class="back-top" href="#top" aria-label="返回顶部">返回顶部</a>
+      <p>
+        <span data-lang="zh">正文仅在本地提取与渲染，不会上传到外部服务器。</span>
+        <span data-lang="en">Content is extracted and rendered locally; nothing is uploaded.</span>
+        &nbsp;<a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+        · <a href="https://github.com/daichangya/pure-read/issues" target="_blank" rel="noopener noreferrer"><span data-lang="zh">反馈</span><span data-lang="en">Feedback</span></a>
+        · MIT License · Pure Read
+      </p>
+      <a class="back-top" href="#top" aria-label="返回顶部">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+        <span data-lang="zh">返回顶部</span><span data-lang="en">Back to top</span>
+      </a>
     </div>
   </footer>
+  <script src="assets/lang-switcher.js"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
   --color-surface: #ffffff;
   --color-text: #0f172a;
   --color-text-muted: #475569;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
+  --color-accent: #1e40af;
+  --color-accent-hover: #1e3a8a;
   --color-border: #e2e8f0;
   --color-card-hover: #f1f5f9;
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
@@ -16,6 +16,7 @@
   --transition: 150ms ease;
   --max-width: 896px;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  --font-heading: "Noto Serif SC", "Source Han Serif SC", "SimSun", Georgia, serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,17 @@
 
 * {
   box-sizing: border-box;
+}
+
+/* Language: show zh by default, toggle via body[data-lang] */
+[data-lang="en"] {
+  display: none;
+}
+body[data-lang="en"] [data-lang="zh"] {
+  display: none !important;
+}
+body[data-lang="en"] [data-lang="en"] {
+  display: inline;
 }
 
 html {
@@ -79,7 +91,26 @@ body {
   gap: 0.5rem;
 }
 
+.site-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-brand-link:hover {
+  color: inherit;
+}
+
+.site-brand .icon-logo {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
 .site-title {
+  display: block;
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
@@ -87,6 +118,7 @@ body {
 }
 
 .site-slogan {
+  display: block;
   margin: 0;
   font-size: 0.875rem;
   color: var(--color-text-muted);
@@ -126,17 +158,58 @@ body {
   flex-shrink: 0;
 }
 
+.lang-switcher {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--color-border);
+}
+.lang-switcher .lang-btn {
+  padding: 0.35rem 0.6rem;
+  margin: 0 0.1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+.lang-switcher .lang-btn:hover {
+  color: var(--color-accent);
+  background: var(--color-card-hover);
+}
+.lang-switcher .lang-btn.active {
+  color: var(--color-accent);
+  background: var(--color-card-hover);
+}
+.lang-switcher .lang-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* Hero */
 .hero {
   padding: 3rem 0 3.5rem;
 }
 
+.hero-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  font-family: var(--font-heading);
+}
+
 .hero h1 {
   margin: 0 0 0.5rem;
   font-size: clamp(1.75rem, 4vw, 2.25rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  font-family: var(--font-heading);
 }
 
 .hero-subtitle {
@@ -209,6 +282,41 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.section-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+}
+
+.section-first {
+  border-top: none;
+}
+
+.section-compact {
+  padding: 1.5rem 0;
+}
+
+.section-compact .section-desc {
+  margin-bottom: 0.75rem;
+}
+
+.shortcuts {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.shortcuts kbd {
+  font-size: 0.9em;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  background: var(--color-card-hover);
+  border: 1px solid var(--color-border);
+  font-family: inherit;
+}
+
 .section h2 {
   margin: 0 0 0.5rem;
   font-size: 1.5rem;
@@ -264,6 +372,14 @@ body {
   margin: 0 0 0.35rem;
   font-size: 1rem;
   font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.card h3.card-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
 }
 
 .card-desc {
@@ -271,6 +387,36 @@ body {
   font-size: 0.875rem;
   color: var(--color-text-muted);
   line-height: 1.5;
+}
+
+.card-warm {
+  background: var(--color-card-warm, rgba(251, 191, 36, 0.08));
+  border-color: var(--color-card-warm-border, rgba(251, 191, 36, 0.25));
+}
+@media (prefers-color-scheme: dark) {
+  .card-warm {
+    background: var(--color-card-warm, rgba(251, 191, 36, 0.12));
+    border-color: var(--color-card-warm-border, rgba(251, 191, 36, 0.35));
+  }
+}
+
+/* Preview / screenshot section */
+.preview-figure {
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+.preview-figure img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+.preview-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
 }
 
 /* Install steps */
@@ -435,6 +581,10 @@ body {
   border-radius: var(--radius);
   font-size: 0.875rem;
   color: var(--color-text-muted);
+}
+
+.back-home {
+  margin-top: 2rem;
 }
 
 /* Footer */
